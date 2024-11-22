@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">TepiApp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Teguk Pintar</string>
+    <string name="title_catalog">Catalog</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_save">Save</string>
+    <string name="title_profile">Profile</string>
 </resources>

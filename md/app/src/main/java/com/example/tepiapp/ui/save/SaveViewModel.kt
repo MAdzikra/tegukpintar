@@ -1,13 +1,13 @@
-package com.example.tepiapp.ui.home
+package com.example.tepiapp.ui.save
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class SaveViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is Save Fragment"
     }
     val text: LiveData<String> = _text
 }

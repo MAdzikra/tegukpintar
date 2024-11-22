@@ -1,13 +1,13 @@
-package com.example.tepiapp.ui.notifications
+package com.example.tepiapp.ui.catalog
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class CatalogViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is Catalog Fragment"
     }
     val text: LiveData<String> = _text
 }
