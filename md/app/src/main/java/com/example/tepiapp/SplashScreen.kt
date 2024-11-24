@@ -28,7 +28,7 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // 3000 ms = 3 detik
+        }, 3000)
     }
 
     // Fungsi untuk menerapkan tema yang tersimpan
