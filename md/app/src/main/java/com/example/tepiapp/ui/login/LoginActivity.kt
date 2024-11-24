@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
+import com.example.tepiapp.MainActivity
 import com.example.tepiapp.R
 import com.example.tepiapp.ui.catalog.CatalogFragment
 import com.example.tepiapp.ui.register.SignupActivity
@@ -42,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
 
         loginViewModel.isLoginSuccess.observe(this) { success ->
             if (success) {
-                showCatalogFragment()
+                navigateToMainActivity()
             }
         }
 
@@ -67,20 +68,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    // Fungsi untuk navigasi ke CatalogActivity setelah login berhasil
-    private fun showCatalogFragment() {
-        // Mendapatkan FragmentTransaction untuk mengganti fragment
-        val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-
-        // Membuat instance CatalogFragment
-        val catalogFragment = CatalogFragment()
-
-        // Mengganti fragment yang ditampilkan dengan CatalogFragment
-        fragmentTransaction.replace(android.R.id.content, catalogFragment)
-        fragmentTransaction.addToBackStack(null)  // Menambahkannya ke back stack (opsional)
-        fragmentTransaction.commit()
-
-        // Opsional: Jika ingin menutup LoginActivity agar user tidak bisa kembali ke halaman login
-        finish()
+    private fun navigateToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Tutup LoginActivity agar tidak bisa kembali
     }
 }
